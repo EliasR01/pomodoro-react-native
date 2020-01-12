@@ -21,6 +21,7 @@ class PomodoroCounter extends Component {
         ) {
           Vibration.vibrate([500, 500, 500]);
           clearInterval(counterInterval);
+          this.setState({ started: false });
         }
         if (
           this.state.secondsCounter === 0 &&
